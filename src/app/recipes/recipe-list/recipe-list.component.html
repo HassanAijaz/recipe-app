@@ -4,16 +4,15 @@
             <button type="button" class="btn btn-primary">New recipe</button>
         </div>
     </div>
-    <div class="row justify-content-center align-items-center pt-2">
+    <hr>
+    <div class="row justify-content-center align-items-center">
         <div class="col">
-            <a class="card-group" href="#">
+            <a class="card-group pt-2" href="#" *ngFor="let recipe of recipes">
                 <div class="card">
-                    <img class="card-img-top"
-                        src="https://c.pxhere.com/images/22/4a/6321d069b3386c120e0c860dc56a-1620832.jpg!d"
-                        alt="Card image cap">
+                    <img class="card-img-top" [src]="recipe.imagePath" alt="{{recipe.name}}">
                     <div class="card-body">
-                        <h4 class="card-title">Recipe Name</h4>
-                        <p class="card-text">Description</p>
+                        <h4 class="card-title">{{recipe.name}}</h4>
+                        <p class="card-text">{{recipe.description}}</p>
                     </div>
                 </div>
             </a>
